@@ -2,7 +2,8 @@ Class diagrams are the main building block in object-oriented modeling. They are
 We use different kinds of UML diagrams to show classes/objects and their relationships to each other.
 A class diagram shows the different characteristics of one or more classes and their relationships to each other.
 
-UML Class Notation : A class represent a concept which encapsulates state (attributes) and behavior (operations). Each attribute has a type. Each operation has a signature. The class name is the only mandatory information.
+UML Class Notation : A class represent a concept which encapsulates state (attributes) and behavior (operations). Each attribute has a type. Each operation has a signature. 
+The class name is the only mandatory information.
 
 Class Name:
 The name of the class appears in the first partition.
@@ -32,11 +33,13 @@ public abstract class GraphicObject {
    // declare nonabstract methods
    abstract void draw();
 }
-When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.
+When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not,
+then the subclass must also be declared abstract.
 
 *Interface:
 An interface is a blueprint of a class. It has static constants and abstract methods.
-The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body.
+It is used to achieve abstraction and multiple inheritance in Java.
 In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
 Java Interface also represents the IS-A relationship.
 It cannot be instantiated just like the abstract class.
@@ -71,9 +74,11 @@ public class Weapon {
 To show aggregation in a diagram, draw a line from the parent class to the child class with a diamond shape near the parent class.
 
 *Composition:
-Composition is a stronger form of Aggregation. In a Composition relationship, the part is exclusive to the container - it can't belong to more than one container or whole. For example, a House object can contain many Room objects, but a Room object can only belong to one House.
+Composition is a stronger form of Aggregation. In a Composition relationship, the part is exclusive to the container - it can't belong to more than one container or whole.
+For example, a House object can contain many Room objects, but a Room object can only belong to one House.
 
-Additionally, with composition the part can't exist without the whole, and the life cycle of the part is completely dependent upon the life cycle of the whole. When the House is created, the Room is created with it. When the House is destroyed, the Room is destroyed with it (you can't pick up a Room and put it into another House).
+Additionally, with composition the part can't exist without the whole, and the life cycle of the part is completely dependent upon the life cycle of the whole.
+When the House is created, the Room is created with it. When the House is destroyed, the Room is destroyed with it (you can't pick up a Room and put it into another House).
 
 for EX:
 
