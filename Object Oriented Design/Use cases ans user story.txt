@@ -1,0 +1,37 @@
+And that’s why I think the user story is one of the most useful tools to come out of the Agile movement. A user story — some people call it a scenario — expresses one very specific need that a user has. It’s usually written out as a couple of sentences. Most user stories are written in the language of the users, so any user should be able to read a user story and immediately understand what it means. A lot of time, user stories are written on index cards, although I’ve put them in Word documents, Excel spreadsheets and Wiki pages (depending on how the particular project is run).
+
+A use case is similar to a user story, because it also describes one specific interaction between the user and the software. When I’m training people to improve the way they write down their project’s requirements, I often describe the use case as a “deceptively simple tool” that helps us find and write down all of the ways users interact with the software.
+
+Looking at those definitions, I can definitely see why there’s confusion about the difference between user stories and use cases. If you look at the last two paragraphs, it might sound like I said the same thing twice! But while user stories and use cases are definitely similar, there are important differences between them. Each serves a distinct purpose, and I think they both have their place on a well-run software project.
+
+Use case example.
+Use Case Name: Place Rent Order
+
+Actors:
+
+-Shopper
+-Fulfillment System
+-Billing System
+-Basic Use Case Description: 
+
+User selects items to rent
+1.The User provides payment and shipping information
+2.User orders the items
+3.The system responds with confirmation of the order and a renting number that the user can use to check out the vehicle. 
+4.The system will also provide the user with a countdown for the remainder of the renting time. 
+5.The user may already have an account with the company with billing information.
+
+User story example:
+
+As a user, I want to link the credit card to my profile so that I can pay for a rent faster, easier and without cash.
+As a service provider, I want to add photos of my vehicles in the application so that I can attract more users.
+As a user, I want several available vehicles to be displayed so that I can choose the most suitable option for me.
+
+
+THE DIFFERENCES BETWEEN A USER STORY VS USE CASE:
+
+User story is drafted to explain a user’s needs. It highlights a problem that a user faces in his day to day life. The language of this draft is very simple. It is developed to keep all the stakeholders on the same page. On the other hand, use cases are developed for the product team only. It gives the team an idea of what the software should achieve. It also highlights all the steps the developers need to follow in order to make the software. For this reason, use cases contain a lot more detail than user stories.
+
+THE SIMILARITIES OF A USER STORY AND A USE CASE:
+
+The biggest similarity between the two approaches is the key components. User stories have components like user role, goal etc. Use cases also have similar concepts. It includes actor, pre-conditions and other terms. So, both of these concepts become similar in how they approach a problem.

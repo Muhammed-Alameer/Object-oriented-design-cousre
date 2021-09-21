@@ -1,0 +1,104 @@
+Class diagrams are the main building block in object-oriented modeling. They are used to show the different objects in a system, their attributes, their operations and the relationships among them.
+We use different kinds of UML diagrams to show classes/objects and their relationships to each other.
+A class diagram shows the different characteristics of one or more classes and their relationships to each other.
+
+UML Class Notation : A class represent a concept which encapsulates state (attributes) and behavior (operations). Each attribute has a type. Each operation has a signature. The class name is the only mandatory information.
+
+Class Name:
+The name of the class appears in the first partition.
+Class Attributes:
+Attributes are shown in the second partition.
+The attribute type is shown after the colon.
+Attributes map onto member variables (data members) in code.
+Class Operations (Methods):
+Operations are shown in the third partition. They are services the class provides.
+The return type of a method is shown after the colon at the end of the method signature.
+The return type of method parameters are shown after the colon following the parameter name. Operations map onto class methods in code
+Perspectives of Class Diagram:
+Conceptual: represents the concepts in the domain
+Specification: focus is on the interfaces of Abstract Data Type (ADTs) in the software
+Implementation: describes how classes will implement their interfaces
+
+Relationships between classes
+
+*Abstract:
+An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:
+
+If a class includes abstract methods, then the class itself must be declared abstract, as in:
+
+public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.
+
+*Interface:
+An interface is a blueprint of a class. It has static constants and abstract methods.
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+Java Interface also represents the IS-A relationship.
+It cannot be instantiated just like the abstract class.
+
+Syntax:
+interface <interface_name>{  
+      
+    // declare constant fields  
+    // declare methods that abstract   
+    // by default.  
+} 
+
+Abstract Classes Compared to Interfaces:
+Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods declared with or without an implementation. However, with abstract classes, you can declare fields that are not static and final, and define public, protected, and private concrete methods. With interfaces, all fields are automatically public, static, and final, and all methods that you declare or define (as default methods) are public. In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.
+
+*Aggregation:
+Aggregation is a stronger form of Association in that is involves ownership: ClassA contains or owns ClassB (the "part"). ClassB is part of the state of ClassA, just like in association. The main difference is that the aggregation is not bi-directional: it's uni-directional. In other words, the "action" goes in only one direction. The containing class "owns" the part class.
+
+For example:
+
+public class Player {
+    private String name;
+    private String playerClass;
+    private Weapon[] weapons;
+    public void armPlayer(Weapon w) { ... }   
+}
+public class Weapon {
+    private String name;
+    private int damage;
+}
+
+To show aggregation in a diagram, draw a line from the parent class to the child class with a diamond shape near the parent class.
+
+*Composition:
+Composition is a stronger form of Aggregation. In a Composition relationship, the part is exclusive to the container - it can't belong to more than one container or whole. For example, a House object can contain many Room objects, but a Room object can only belong to one House.
+
+Additionally, with composition the part can't exist without the whole, and the life cycle of the part is completely dependent upon the life cycle of the whole. When the House is created, the Room is created with it. When the House is destroyed, the Room is destroyed with it (you can't pick up a Room and put it into another House).
+
+for EX:
+
+public class Name {
+    private String firstName;
+    private String middleName;
+    private String lastName;
+    public Name(String first, String middle, String last) { ... }
+    public String getFirstName() { ... }
+    public String getMiddleName() { ... }
+    public STring getLastName() { ... }
+}
+public class Student {
+    private Name name;
+    private Address address;
+    private String phoneNumber;
+    public Student() { ... }
+    public void setName(String first, String middle, String last) {
+        name = new Name(first, middle, last);
+    }
+    public String getName() {
+        return name.getLastName() + ", " + name.getFirstName()
+             + " " + name.getMiddleName();
+    }
+}
+
+To show a composition relationship in a UML diagram, use a directional line connecting the two classes, with a filled diamond shape adjacent to the container class and the directional arrow to the contained class.
+
